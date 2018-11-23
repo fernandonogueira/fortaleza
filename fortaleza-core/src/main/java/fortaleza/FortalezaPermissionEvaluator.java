@@ -24,7 +24,7 @@ public class FortalezaPermissionEvaluator implements PermissionEvaluator {
             Serializable organizationId = ((FOrganization) targetDomainObject).getOId();
 
             FortalezaUserDetails principal = ensureUserDetailsType(authentication.getPrincipal());
-            principal.getOrganizations()
+//            principal.getOrganizations()
 
         } else if (isPermissionEvaluatedType(targetDomainObject)) {
             return false;

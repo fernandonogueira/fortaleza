@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface TypePermissionEvaluator<Q> {
 
-    boolean hasPermission(List<FOrganization> userOrgs, List<PermissionAction> permissionActions, Q object);
+    boolean hasPermission(TypeEvaluatorHandler handler, List<FOrganization> userOrgs, List<PermissionAction> permissionActions, Q object);
 
 }
