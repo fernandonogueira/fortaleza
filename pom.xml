@@ -9,6 +9,7 @@
     <modules>
         <module>fortaleza-core</module>
         <module>fortaleza-data-layer</module>
+        <module>fortaleza-data-layer-jpa</module>
     </modules>
     <groupId>fortaleza</groupId>
     <artifactId>fortaleza</artifactId>

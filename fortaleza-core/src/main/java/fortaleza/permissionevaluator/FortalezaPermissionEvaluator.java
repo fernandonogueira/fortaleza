@@ -1,6 +1,7 @@
 package fortaleza.permissionevaluator;
 
 import fortaleza.PermissionProvider;
+import fortaleza.model.SecuredResponse;
 import org.springframework.security.access.PermissionEvaluator;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
@@ -17,7 +18,14 @@ public class FortalezaPermissionEvaluator implements PermissionEvaluator {
     }
 
     public boolean hasPermission(Authentication authentication, Object targetDomainObject, Object permission) {
-        return hasPrivilege(authentication.getAuthorities(), targetDomainObject.getClass().getSimpleName(), (String) permission);
+
+        if (targetDomainObject instanceof SecuredResponse) {
+            Class realClass = ((SecuredResponse) targetDomainObject).getClassType();
+            return hasPrivilege(authentication.getAuthorities(), realClass.getSimpleName(), (String) permission);
+        } else {
+            return hasPrivilege(authentication.getAuthorities(), targetDomainObject.getClass().getSimpleName(), (String) permission);
+        }
+
     }
 
     private boolean hasPrivilege(Collection<? extends GrantedAuthority> authorities, String simpleName, String permission) {
