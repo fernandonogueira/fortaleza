@@ -1,5 +1,6 @@
 package fortaleza.datalayer;
 
+import fortaleza.datalayer.repository.BaseRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 

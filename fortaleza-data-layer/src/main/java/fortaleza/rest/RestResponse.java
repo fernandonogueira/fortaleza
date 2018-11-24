@@ -1,7 +1,7 @@
 package fortaleza.rest;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import fortaleza.model.SecuredResponse;
+import fortaleza.model.SecuredContent;
 import org.springframework.data.domain.Page;
 
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Optional;
 
-public class RestResponse<T> implements SecuredResponse {
+public class RestResponse<T> implements SecuredContent {
 
     @JsonIgnore
     private Class<T> type;

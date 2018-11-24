@@ -1,4 +1,4 @@
-package fortaleza.datalayer;
+package fortaleza.datalayer.model;
 
 import java.io.Serializable;
 

@@ -64,3 +64,4 @@ hs_err_pid*
 
 /target/
 /fortaleza-core/target/
+/fortaleza-data-layer/target/

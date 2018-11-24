@@ -1,6 +1,6 @@
 package fortaleza.model;
 
-public interface SecuredResponse {
+public interface SecuredContent {
 
     Class getClassType();
 
